@@ -2,7 +2,8 @@ package progscala2.introscala.shapes
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
-import progscala2.introscala.shapes.Messages.Start
+
+private object Start
 
 object ShapeActorDriver {
   def main(args: Array[String]): Unit = {

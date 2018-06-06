@@ -4,7 +4,6 @@ import akka.actor.Actor
 
 
 object Messages {
-  object Start
   object Exit
   object Finished
   case class Response(message: String)
