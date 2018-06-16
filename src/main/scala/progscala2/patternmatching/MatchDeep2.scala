@@ -1,8 +1,7 @@
 package progscala2.patternmatching
 
 
-
-object MatchDeep extends App {
+object MatchDeep2 extends App {
   case class Address(street: String, city: String, country: String)
   case class Person(name: String, age: Int, address: Address)
 
@@ -12,10 +11,13 @@ object MatchDeep extends App {
 
   for (person <- Seq(alice, bob, charlie)) {
     person match {
-      case Person("Alice", 25, Address(_, "Chicago", _)) => println("Hi Alice!")
-      case Person("BOb", 29, Address("2 Java Ave", "Miami", "USA")) => println("Hi BOb!")
-      case Person(name, age, _) =>
-        println(s"Who are you, $age year-old person named $name?")
+      // case p: Person =>
+      case p @ Person("Alice", 25, address) =>
+        println(s"Hi Alice! $p")
+      case p @ Person("Bob", 29, a @ Address(street, city, county)) =>
+        println(s"Hi ${p.name} age ${p.age} in ${a.city}")
+      case p @ Person(name, age, _) =>
+        println(s"Who are you, $age year-old person named $name? $p")
     }
   }
 }
