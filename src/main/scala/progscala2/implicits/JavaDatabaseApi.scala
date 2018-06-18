@@ -28,4 +28,3 @@ package progscala2.implicits {
     }
   }
 }
-
