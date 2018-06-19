@@ -33,7 +33,7 @@ object MatchVararglist extends App {
     WhereIn("state", "IL", "CA", "VA"),
     WhereOp("state", EQ, "IL"),
     WhereOp("name", EQ, "Buck Trends"),
-    WhereOp("age", GT, 29),
+    WhereOp("age", GT, 29)
   )
 
   for (where <- wheres) {
