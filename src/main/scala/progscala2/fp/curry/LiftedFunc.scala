@@ -15,4 +15,6 @@ object LiftedFunc extends App {
   finickyOption("finicky")
 
   finickyOption("other")
+
+  Seq(1,2)
 }
